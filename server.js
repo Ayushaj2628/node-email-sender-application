@@ -30,8 +30,8 @@ const getUserDataFromDatabase = async () => {
 const transporter = nodemailer.createTransport({
     service: 'gmail', // Replace with your email service (e.g., Yahoo, Outlook)
     auth: {
-        user: '15.jainanu@gmail.com', // Replace with your email
-        pass: 'njmwupfgijowokpa' // Replace with your email password or app password
+        user: '', // Replace with your email
+        pass: '' // Replace with your email password or app password
     }
 });
 
@@ -44,7 +44,7 @@ app.get('/send-email', async (req, res) => {
         // Send emails to all users
         for (const user of users) {
             const mailOptions = {
-                from: '15.jainanu@gmail.com', // Sender's email address
+                from: '', // Sender's email address
                 to: user.email, // Recipient's email address
                 subject: `Welcome, ${user.name}!`, // Personalized subject
                 html: `
